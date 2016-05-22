@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9205EC51CF1E3E900D8DBFC /* ServiceSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A9205EC41CF1E3E900D8DBFC /* ServiceSocket.m */; };
+		A9205EC81CF1E40C00D8DBFC /* ClientSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A9205EC71CF1E40C00D8DBFC /* ClientSocket.m */; };
 		A93511331CEEE3ED00D30024 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A93511321CEEE3ED00D30024 /* main.m */; };
 		A93511361CEEE3ED00D30024 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A93511351CEEE3ED00D30024 /* AppDelegate.m */; };
 		A93511391CEEE3ED00D30024 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A93511381CEEE3ED00D30024 /* ViewController.m */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A9205EC31CF1E3E900D8DBFC /* ServiceSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSocket.h; sourceTree = "<group>"; };
+		A9205EC41CF1E3E900D8DBFC /* ServiceSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSocket.m; sourceTree = "<group>"; };
+		A9205EC61CF1E40C00D8DBFC /* ClientSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientSocket.h; sourceTree = "<group>"; };
+		A9205EC71CF1E40C00D8DBFC /* ClientSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientSocket.m; sourceTree = "<group>"; };
 		A935112E1CEEE3ED00D30024 /* iOS_CS_Socket_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_CS_Socket_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93511321CEEE3ED00D30024 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A93511341CEEE3ED00D30024 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,9 +45,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9205EC21CF1E3A200D8DBFC /* SocketTerminal */ = {
+			isa = PBXGroup;
+			children = (
+				A9205EC31CF1E3E900D8DBFC /* ServiceSocket.h */,
+				A9205EC41CF1E3E900D8DBFC /* ServiceSocket.m */,
+				A9205EC61CF1E40C00D8DBFC /* ClientSocket.h */,
+				A9205EC71CF1E40C00D8DBFC /* ClientSocket.m */,
+			);
+			name = SocketTerminal;
+			sourceTree = "<group>";
+		};
 		A93511251CEEE3ED00D30024 = {
 			isa = PBXGroup;
 			children = (
+				A9205EC21CF1E3A200D8DBFC /* SocketTerminal */,
 				A93511301CEEE3ED00D30024 /* iOS_CS_Socket_demo */,
 				A935112F1CEEE3ED00D30024 /* Products */,
 			);
@@ -149,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9205EC51CF1E3E900D8DBFC /* ServiceSocket.m in Sources */,
 				A93511391CEEE3ED00D30024 /* ViewController.m in Sources */,
+				A9205EC81CF1E40C00D8DBFC /* ClientSocket.m in Sources */,
 				A93511361CEEE3ED00D30024 /* AppDelegate.m in Sources */,
 				A93511331CEEE3ED00D30024 /* main.m in Sources */,
 			);
@@ -300,6 +320,7 @@
 				A93511471CEEE3ED00D30024 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
