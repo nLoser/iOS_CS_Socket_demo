@@ -32,18 +32,17 @@ char bufRecv[BUF_SIZE] = {0};
     serv_addr.sin_family      = AF_INET;
 }
 
-- (void)sendMsg:(const char *)msg
+- (void)sendMsg:(char *)msg
 {
-    NSLog(@"-------- %lu -----------",sizeof(msg));
     while (1) {
         int serv_sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
         int success = connect(serv_sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
         
         if (success != -1)
         {
-            write(serv_sock, msg, sizeof(msg));           // 1.发送msg数据给服务端
-            read(serv_sock, bufRecv, sizeof(bufRecv)-1);  // 2.接收服务端发来的数据
-            NSLog(@"【客户端】收到数据：%@ %lu",[NSString stringWithUTF8String:bufRecv],sizeof(msg));
+            write(serv_sock, msg, strlen(msg));           // 1.发送msg数据给服务端
+            read(serv_sock, bufRecv, strlen(msg));  // 2.接收服务端发来的数据
+            NSLog(@"【客户端】收到数据：%@",[NSString stringWithUTF8String:bufRecv]);
             memset(bufRecv, 0, BUF_SIZE);
         }
         

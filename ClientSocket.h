@@ -13,6 +13,6 @@
 - (void)makeClientIpAdd:(const char *)ip_addr
                    Port:(in_port_t)port;
 
-- (void)sendMsg:(const char *)msg;
+- (void)sendMsg:(char *)msg;
 
 @end

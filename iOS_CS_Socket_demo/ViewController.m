@@ -29,7 +29,7 @@
     {
         _clnt_sock = [ClientSocket new];
         [_clnt_sock makeClientIpAdd:ipstr Port:portNum];
-        [_clnt_sock sendMsg:"学习中文好榜样"];
+        [_clnt_sock sendMsg:"China is big city, 学习中文好榜样~&*））#Ωßå"];
     }
 #endif
     
