@@ -50,7 +50,7 @@
     memset(&serv_addr, 0, sizeof(serv_addr));  //每个字节都用0填充
     serv_addr.sin_family = AF_INET;  //使用IPv4地址
     serv_addr.sin_addr.s_addr = inet_addr("192.168.1.3");  //具体的IP地址
-    serv_addr.sin_port = ntohs(1234);  //端口
+    serv_addr.sin_port = htons(1234);  //端口
     
     dispatch_async(dispatch_get_main_queue(), ^{
         _text.text = @"【客户端】\n 开始寻找服务IP";
